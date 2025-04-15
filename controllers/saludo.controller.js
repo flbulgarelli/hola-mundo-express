@@ -1,11 +1,11 @@
+const { leerNombre } = require("../utils");
+
 function bienvenida(req, res) {
-  const nombre = req.query.nombre || 'Mundo';
-  res.render('bienvenida', { nombre });
+  res.render('bienvenida', { nombre: leerNombre(req) });
 }
 
 function despedida(req, res) {
-  const nombre = req.query.nombre || 'Mundo';
-  res.render('despedida', { nombre });
+  res.render('despedida', { nombre: leerNombre(req) });
 }
 
 module.exports = {

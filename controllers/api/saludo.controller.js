@@ -1,11 +1,11 @@
+const { leerNombre } = require("../../utils");
+
 function bienvenida(req, res) {
-  const nombre = req.query.nombre || 'Mundo';
-  res.json({ mensaje: `¡Hola ${nombre}!` });
+  res.json({ mensaje: `¡Hola ${leerNombre(req)}!` });
 }
 
 function despedida(req, res) {
-  const nombre = req.query.nombre || 'Mundo';
-  res.json({ mensaje: `¡Adios ${nombre}, que la fuerza te acompañe!` });
+  res.json({ mensaje: `¡Adios ${leerNombre(req)}, que la fuerza te acompañe!` });
 }
 
 module.exports = {
