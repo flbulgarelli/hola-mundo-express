@@ -1,13 +1,14 @@
-class SaludoController {
-  bienvenida(req, res) {
-    const nombre = req.query.nombre || 'Mundo';
-    res.render('bienvenida', { nombre });
-  }
-
-  despedida(req, res) {
-    const nombre = req.query.nombre || 'Mundo';
-    res.render('despedida', { nombre });
-  }
+function bienvenida(req, res) {
+  const nombre = req.query.nombre || 'Mundo';
+  res.render('bienvenida', { nombre });
 }
 
-module.exports = SaludoController;
+function despedida(req, res) {
+  const nombre = req.query.nombre || 'Mundo';
+  res.render('despedida', { nombre });
+}
+
+module.exports = {
+  bienvenida,
+  despedida
+};

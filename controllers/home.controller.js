@@ -1,7 +1,5 @@
-class HomeController {
-  index(req, res) {
-    res.redirect('/bienvenida');
-  }
+function index(req, res) {
+  res.redirect('/bienvenida');
 }
 
-module.exports = HomeController;
+module.exports = { index };
